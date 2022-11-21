@@ -1,8 +1,9 @@
 import React from 'react'
+import AccessComp from '../../components/AccessComp/AccessComp'
 
 const Access = () => {
   return (
-    <div>Access</div>
+    <AccessComp/>
   )
 }
 

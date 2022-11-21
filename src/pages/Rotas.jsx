@@ -1,5 +1,8 @@
 import React from 'react'
-import { Routes, Route, BrowserRouter } from "react-router-dom";
+
+
+import { Routes, Route, Link } from "react-router-dom";
+
 
 
 // Pages
@@ -20,17 +23,26 @@ const Rotas = () => {
 
     return (
 
-        <BrowserRouter>
-            <Routes>
+        <>
+            
+                <Link to="/">Home</Link>
+                <Link to="/access">Access</Link>
+                <Link to="/minhaconta">Minha Conta</Link>
+                <Link to="/products">Produtos</Link>
 
-                <Route component = { Home }  path="/" exact />
-                <Route component = { Access }  path="/access" />
-                <Route component = { MinhaConta }  path="/minhaconta" />
-                <Route component = { Products }  path="/products" />
+                <Routes>
+                    <Route path="/" component={<Home/>}  />
+                    <Route path="/access" component={<Access/>}  />
+                    <Route path="/minhaconta" component={<MinhaConta/>}  />
+                    <Route path="/products" component={<Products/>}  />
+                </Routes>
 
-            </Routes>
+            
+            
+        </>
 
-        </BrowserRouter>
+
+
     )
 }
 
